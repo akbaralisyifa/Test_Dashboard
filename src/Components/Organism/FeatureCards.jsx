@@ -1,5 +1,6 @@
 import HeadFeature from '../Atoms/HeadFeature';
 import FeatureCard from '../Molecules/FeatureCard';
+import FeatureVs from '../Molecules/FeatureVs';
 
 const dataCard = [
   {
@@ -20,11 +21,7 @@ export default function FeatureCards() {
       <HeadFeature>Expenses and Income</HeadFeature>
       <div className="flex justify-between mt-5">
         <FeatureCard title={dataCard[0].title} percentage={dataCard[0].percentage} amount={dataCard[0].amount} />
-        <div className="flex flex-col items-center">
-          <p>|</p>
-          <h2>VS</h2>
-          <p>|</p>
-        </div>
+        <FeatureVs />
         <FeatureCard title={dataCard[1].title} percentage={dataCard[1].percentage} amount={dataCard[1].amount} />
       </div>
       <div className="mt-7">
