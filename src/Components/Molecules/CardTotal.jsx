@@ -11,7 +11,7 @@ export default function CardTotal() {
         <p className="font-normal text-xl text-slate-700 ">Your Total Balance</p>
       </div>
       <div className="flex justify-between mt-5">
-        <img src={LINE_DIAGRAM} alt="" className="w-32 h-10" />
+        <img src={LINE_DIAGRAM} alt="" className="w-28 h-10" />
         <div className="flex gap-2 items-center">
           <FaRegArrowAltCircleUp className="text-lg mt-1" />
           <p className="text-lg">6%</p>
