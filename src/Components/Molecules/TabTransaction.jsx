@@ -49,7 +49,7 @@ export default function TabTransaction({ isTab, initalTab, handleTab }) {
       </Tabs.List>
 
       <div className="">
-        <div className="absolute w-[750px] overflow-hidden left-4 top-20">
+        <div className="absolute w-[700px] overflow-hidden left-4 top-20">
           <Tabs.Panel value="Newest">
             <TabelTransaction dataTransaction={isDataTransaction} />
           </Tabs.Panel>

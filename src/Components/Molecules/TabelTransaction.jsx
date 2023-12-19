@@ -1,10 +1,18 @@
 import { BiDotsVerticalRounded } from 'react-icons/bi';
 
 export default function TabelTransaction({ dataTransaction }) {
+  const priceIDR = (price) => {
+    const formattedPrice = price.toLocaleString('en-US', {
+      style: 'currency',
+      currency: 'USD',
+    });
+
+    return formattedPrice.replace(/\.00$/, '');
+  };
   return (
     <table className="w-full">
       {dataTransaction.map((item, index) => (
-        <tr className="flex justify-between py-3 border-b-2">
+        <tr key={index} className="flex justify-between py-3 border-b-2">
           <div className="flex items-center gap-3">
             <td>
               <img src={item.avatar} alt={item.name} className="w-12 h-12" />
@@ -15,8 +23,8 @@ export default function TabelTransaction({ dataTransaction }) {
             </td>
           </div>
           <div className="flex items-center gap-7">
-            <p className="font-semibold text-base">-{item.price}</p>
-            <BiDotsVerticalRounded className="text-xl" />
+            <p className="font-semibold text-base">-{priceIDR(item.price)}</p>
+            <BiDotsVerticalRounded className="text-xl cursor-pointer" />
           </div>
         </tr>
       ))}
