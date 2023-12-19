@@ -8,6 +8,8 @@ import ONLINE_STORE from './online-store.png';
 import HOSPITAL from './hospital.png';
 import TICKET from './ticket.png';
 import CROWN from './crown.png';
+import LINE_DIAGRAM from './sound.png';
+import MONEY from './icon-money.png';
 
 export { AVATAR1, AVATAR2, AVATAR3, AVATAR4, AVATAR5 };
-export { ONLINE_STORE, HOSPITAL, TICKET, CROWN };
+export { ONLINE_STORE, HOSPITAL, TICKET, CROWN, LINE_DIAGRAM, MONEY };
