@@ -2,6 +2,7 @@ import { HOSPITAL, ONLINE_STORE, TICKET } from '../../assets/avatars';
 import HeadFeature from '../Atoms/HeadFeature';
 import { BiDotsVerticalRounded } from 'react-icons/bi';
 import { MdArrowForward } from 'react-icons/md';
+import FeatureLatest from '../Molecules/FeatureLatest';
 
 const dataLatest = [
   {
@@ -29,17 +30,9 @@ export default function FeatureCardLatest() {
         <BiDotsVerticalRounded className="text-xl" />
       </div>
 
-      <div className="">
-        {dataLatest.map((item, index) => (
-          <div key={index} className="flex items-center gap-5 py-4 border-b-2">
-            <img src={item.avatar} alt="" className="w-14 h-14 rounded-full bg-indigo-200 p-2" />
-            <div>
-              <h2 className="font-bold text-base text-slate-700">{item.title}</h2>
-              <p className="text-slate-500 font-semibold text-sm">{item.tanggal}</p>
-            </div>
-          </div>
-        ))}
-      </div>
+      {dataLatest.map((item, index) => (
+        <FeatureLatest key={index} {...item} />
+      ))}
 
       <div className="mt-5 flex justify-center">
         <button className="text-xl text-indigo-500 hover:text-indigo-700 flex justify-center items-center gap-2 transition duration-200">
